@@ -7,7 +7,7 @@
     <div class="jumbotron jumbotron-fluid jumbo-color">
         <div class="container">
             <h1 class="display-4 font-weight-bold"> {{post.title}} </h1>
-            <p class="lead"> {{post.desc}} </p>
+            <p class="lead"> {{post.desc | safe}} </p>
         </div>
     </div>
     {% endfor %}

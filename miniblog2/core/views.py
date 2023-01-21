@@ -51,13 +51,14 @@ def User_Logout(request):
     return HttpResponseRedirect('/')
 
 def User_Signup(request):
-    if request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            messages.success(request, 'Congrats you have become an author')
-            user = form.save()
-            group = Group.objects.get(name='Author')
-            user.groups.add(group)
+    if not request.user.is_authenticated:
+        if request.method == 'POST':
+            form = SignUpForm(request.POST)
+            if form.is_valid():
+                messages.success(request, 'Congrats you have become an author')
+                user = form.save()
+                group = Group.objects.get(name='Author')
+                user.groups.add(group)
     else:
         form = SignUpForm()
     return render(request,'core/signup.html',{'form':form})

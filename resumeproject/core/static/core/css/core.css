@@ -1,0 +1,40 @@
+/* fonts */
+
+.st-font{
+font-family: 'Satisfy', cursive;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+.container-fluid{
+ min-height: 100%;
+}
+
+/* icons color */
+
+.i-color{
+    color: chartreuse;
+}
+
+/* service subtitle color */
+.ss-color{
+    color: whitesmoke;
+}
+a.nav-link{
+    color: whitesmoke;
+}
+a.nav-link:hover{
+    color: black;
+    background-color: #e9cd79;
+}
+a.nav-link.active{
+    color: black;
+    background-color: rgb(235, 235, 19);
+    font-weight: bold;
+}
+.ul{
+    list-style-type: none
+}

@@ -1,0 +1,20 @@
+{% load static %}
+
+<div class="border-right border-warning h-100">
+    <div class="text-center">
+        <img src=" {% static 'core/images/img.jpg' %} " alt="profile pic" class="img-fluid rounded-circle mt-5"
+        width="100px" height="100px">
+        <h6 class="text-white mt-3 st-font">Muhammad Saad Naseem</h6>
+    </div>
+    <hr class="border-light">   
+    <nav class="nav flex-column text-center">
+        <a href="{% url 'home page' %}" class="nav-link {{home}}"  >Home</a>
+        <a href="{% url 'services page' %}" class="nav-link {{services}} ">Sevices</a>
+        <a href="{% url 'skills page' %}" class="nav-link {{skills}} ">Skills</a>
+        <a href="{% url 'contact page' %}" class="nav-link {{contact}} ">Contact</a>
+    </nav>
+</div>
+
+
+
+

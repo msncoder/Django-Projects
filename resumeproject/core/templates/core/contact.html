@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock title %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-warning mb-5 border-bottom">CONTACT US</h1>
+    <div class="row text-white mb5">
+        <p class="mx-auto mb-5">
+            Do tou have any question? Please do not hesitate to contact. I will come back to you within a matter of hours to help you.
+        </p>
+        <div class="col-sm-9 mb-5">
+            <form action="" method='POST'>
+                {% csrf_token %} 
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputName">Your Name</label>
+                        {{form.name}}
+                    </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputName">Your Email *</label>
+                            {{form.email}}                       
+                         </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputSubject">Your Subject</label>
+                            {{form.subject}}                        </div>
+                        <div class="mb-3 col-md-12">
+                            <label for="inputTextArea">Yout massege *</label>
+                            {{form.message}}                        </div>
+                        <button class="btn- btn-primary form-control my-3" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-3 text-center ">
+            <ul class="list-unstyle ul">
+                <li ><i class="fa-solid fa-location-dot"></i> 
+                    <p>Korangi Karachi Sindh Pakistan</p>
+                </li>
+                <li><i class="fa-solid fa-phone"></i>
+                    <p>0304-0034266</p>
+                </li>
+                <li><i class="fa-solid fa-envelope"></i>
+
+                <p>msaadnaseem2000@gmail.com</p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter i-color mr-3"></i></a>
+    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook i-color mr-3"></i></a>
+    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram i-color mr-3"></i></a><
+</div>
+{% endblock content %}

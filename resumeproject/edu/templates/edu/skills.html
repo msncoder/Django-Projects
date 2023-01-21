@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Skills{% endblock title %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-warning mb-5 border-bottom">SKILLS</h1>
+
+    <div class="row text-white">
+        {% for skill in skills %}
+        <div class="col-sm-5 mt-5">
+            <h3>{{skill.title}}</h3>
+            <div class="progress">
+                <div class="progress-bar {{skill.color}}" role="progressbar" style="width:{{skill.value}}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                     {{skill.value}}%
+                </div>
+                
+            </div>
+            
+        </div>
+     
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock content %}

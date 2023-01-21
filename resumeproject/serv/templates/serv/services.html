@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Sercices{% endblock title %}
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="text-warning mb-5 border-bottom">SERVICES</h1>
+    <div class="row text-center text-white mb-5">
+        {% for service in servicesdata %}
+        <div class="col-sm-4"><i class=" {{service.icon}} "></i>
+        <h3> {{service.title}} </h3>
+        <p class="ss-color"> {{service.desc|safe}} </p>
+        </div>
+        {% endfor %}
+       
+    </div>
+    
+</div>
+
+{% endblock content %}
+

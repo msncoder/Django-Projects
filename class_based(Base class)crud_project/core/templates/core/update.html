@@ -1,0 +1,18 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-12 text-center">
+    <h4 class="alert alert-info">Update User Form</h4>
+    <form action="#" method="post", novelidate>
+        {% csrf_token %}
+        <div class="form-group">
+            {{form.as_p}}
+        </div>
+        <input type="submit" value="Update" class="btn btn-danger">
+        <a href="{% url 'add show page' %}" class="btn btn-warning btn-sm">Back To Home</a>
+    </form>
+</div>
+</div>
+{% endblock content %}

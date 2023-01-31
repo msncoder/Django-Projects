@@ -1,5 +1,6 @@
 # Django-Projects
-This is a repository for Django Projects
+This is a repository for Django Projects 
+
 Python 3.10.4
 anyio==3.6.2
 argon2-cffi==21.3.0
@@ -121,3 +122,5 @@ whitenoise==5.2.0
 widgetsnbextension==3.6.1
 wikipedia==1.4.0
 youtube-search-python==1.6.6
+for install all libraries and module 
+pip install -R readme.md
